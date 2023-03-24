@@ -117,7 +117,7 @@ sudo systemctl restart wazuh-manager
     * Tail the `ossec.log` file and ensure you see valid responses from the SOCFortress Threat Intel API. `tail -f /var/ossec/logs/ossec.log | grep socfortress`
 
 <div align="center" width="50" height="50">
-  <a href="https://github.com/socfortress/SOCFortress-Threat-Intel/images/ossec_log.png">
+  <a href="https://raw.githubusercontent.com/socfortress/SOCFortress-Threat-Intel/main/images/ossec_log.PNG">
     <img src="images/ossec_log.PNG" alt="Logo">
   </a>
 
