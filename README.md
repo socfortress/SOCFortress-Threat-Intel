@@ -20,6 +20,8 @@
   <p align="center">
     Integrate your Wazuh-Manager or Graylog with the SOCFortress Threat Intel API to receive real-time threat intel.
     <br />
+    <a href="https://www.socfortress.co/request_threat_intel_api.html"><strong>Register for API Key »</strong></a>
+    <br />
     <br />
   </p>
 </div>
