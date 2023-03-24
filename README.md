@@ -118,7 +118,7 @@ sudo systemctl restart wazuh-manager
 
 <div align="center" width="50" height="50">
   <a href="https://github.com/socfortress/SOCFortress-Threat-Intel/images/ossec_log.png">
-    <img src="images/ossec_log.png" alt="Logo">
+    <img src="images/ossec_log.PNG" alt="Logo">
   </a>
 
   <h3 align="center">Ossec.log File</h3>
@@ -129,7 +129,7 @@ If working correctly, rule id `200983` will trigger when a positive IoC is found
 
 <div align="center" width="50" height="50">
   <a href="https://github.com/socfortress/SOCFortress-Threat-Intel/images/ossec_log.png">
-    <img src="images/wazuh_hits.png" alt="Logo">
+    <img src="images/wazuh_hits.PNG" alt="Logo">
   </a>
 
   <h3 align="center">SOCFortress Threat Intel Fields</h3>
@@ -157,7 +157,7 @@ If working correctly, rule id `200983` will trigger when a positive IoC is found
 
 <div align="center" width="50" height="50">
   <a href="https://github.com/socfortress/SOCFortress-Threat-Intel/images/graylog_response.png">
-    <img src="images/graylog_response.png" alt="Logo">
+    <img src="images/graylog_response.PNG" alt="Logo">
   </a>
 
   <h3 align="center">Graylog Response</h3>
