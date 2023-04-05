@@ -57,7 +57,8 @@ def collect_source_1(data):
         timestamp = '1679526769'
     category = data['category']
     type = data['type']
-    return comment, value, timestamp, category, type
+    virustotal_url = data['virustotal_url']
+    return comment, value, timestamp, category, type, virustotal_url
 
 def collect_source_2(data):
   comment = data['comment']
@@ -66,14 +67,16 @@ def collect_source_2(data):
   last_seen = data['last_seen']
   report_id = data['report_id']
   report_url = data['report_url']
-  return comment, value, type, last_seen, report_id, report_url
+  virustotal_url = data['virustotal_url']
+  return comment, value, type, last_seen, report_id, report_url, virustotal_url
 
 def collect_source_3(data):
   comment = data['comment']
   value = data['value']
   type = data['type']
   last_seen = data['last_seen']
-  return comment, value, type, last_seen
+  virustotal_url = data['virustotal_url']
+  return comment, value, type, last_seen, virustotal_url
 
 def is_ipv4(value):
     try:
@@ -194,7 +197,7 @@ def request_socfortress_api(alert, apikey):
         else:
             alert_output["socfortress"]["report_found"] = 0
         if alert_output["socfortress"]["ioc_source"] == 2 and alert_output["socfortress"]["report_found"] == 1:
-            comment, value, type, last_seen, report_id, report_url = collect_source_2(data)
+            comment, value, type, last_seen, report_id, report_url, virustotal_url = collect_source_2(data)
             # Populate JSON Output with SOCFortress results
             alert_output["socfortress"]["status_code"] = 200
             alert_output["socfortress"]["comment"] = comment
@@ -203,18 +206,20 @@ def request_socfortress_api(alert, apikey):
             alert_output["socfortress"]["type"] = type
             alert_output["socfortress"]["report_id"] = report_id
             alert_output["socfortress"]["report_url"] = report_url
+            alert_output["socfortress"]["virustotal_url"] = virustotal_url
     
         if alert_output["socfortress"]["ioc_source"] == 2 and alert_output["socfortress"]["report_found"] == 0:
-            comment, value, type, last_seen = collect_source_3(data)
+            comment, value, type, last_seen, virustotal_url = collect_source_3(data)
             alert_output["socfortress"]["status_code"] = 200
             alert_output["socfortress"]["comment"] = comment
             alert_output["socfortress"]["value"] = value
             alert_output["socfortress"]["last_seen"] = last_seen
             alert_output["socfortress"]["type"] = type
+            alert_output["socfortress"]["virustotal_url"] = virustotal_url
 
     # Info about the IoC found in SOCFortress
     if alert_output["socfortress"]["ioc_source"] == 1:
-        comment, value, timestamp, category, type = collect_source_1(data)
+        comment, value, timestamp, category, type, virustotal_url = collect_source_1(data)
         # Populate JSON Output object with SOCFortress results
         alert_output["socfortress"]["status_code"] = 200
         alert_output["socfortress"]["comment"] = comment
@@ -222,6 +227,7 @@ def request_socfortress_api(alert, apikey):
         alert_output["socfortress"]["timestamp"] = timestamp
         alert_output["socfortress"]["category"] = category
         alert_output["socfortress"]["type"] = type
+        alert_output["socfortress"]["virustotal_url"] = virustotal_url
 
     debug(alert_output)
     return(alert_output)
