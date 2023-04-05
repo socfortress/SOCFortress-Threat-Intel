@@ -23,6 +23,9 @@
     <a href="https://www.socfortress.co/request_threat_intel_api.html"><strong>Register for API Key »</strong></a>
     <br />
     <br />
+    <a href="https://paypal.me/socfortress?country.x=US&locale.x=en_US"><strong>💰 Make a Donation »</strong></a>
+    <br />
+    <br />
   </p>
 </div>
 
