@@ -61,7 +61,7 @@
 * `IoC Type` - The API currently supports IoC types of `IP`, `Domain`, and `SHA256 Hash`.
 * `Valid API Key` - Request via [our website](https://www.socfortress.co/request_threat_intel_api.html).
 
-> ⚠ **NOTE:** API quotas are currently restricted to `1000` requests per day. The API is currently in beta and is subject to change. Please contact us at [helpdesk.socfortress.co](https://servicedesk.socfortress.co/help/2979687893) if you have any questions or concerns.
+> ⚠ **NOTE:** API quotas are currently restricted to `500` requests per day. The API is currently in beta and is subject to change. Please contact us at [helpdesk.socfortress.co](https://servicedesk.socfortress.co/help/2979687893) if you have any questions or concerns.
 
 * `SOCFortress API Wazuh Rules` - [200980-socfortress.xml](https://raw.githubusercontent.com/socfortress/Wazuh-Rules/main/SOCFortress%20API/200980-socfortress.xml) - **NOT REQUIRED IF INTEGRATING WITH GRAYLOG**
 
