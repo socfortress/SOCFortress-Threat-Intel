@@ -35,7 +35,7 @@ def main(args):
         json_alert = json.load(alert_file)
     debug("# Processing alert")
     debug(json_alert)
-    # Request AbuseIPDB info
+    # Request SOCFortress info
     msg = request_socfortress_api(json_alert,apikey)
     # If positive match, send event to Wazuh Manager
     if msg:
