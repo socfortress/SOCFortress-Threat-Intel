@@ -47,7 +47,7 @@
 > The SOCFortress Threat Intel API allows end users to consume SOCFortress's public threat intel. The integration supports both `Wazuh-Manager` and `Graylog`. 
 
 ## API-KEY
-> The API key is required to authenticate with the API. To obtain an API key, please fill out a request form at [SOCFortress.co](https://www.socfortress.co/request_threat_intel_api.html).
+> The API key is required to authenticate with the API. To obtain an API key, please use SOCFortress Copilot.
 
 ## Criteria
 > The API is currently **only** built for the following criteria:
